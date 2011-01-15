@@ -20,9 +20,14 @@ flicker, it also has some simple statistics.
 == Usage
 
 Example:
-	rake user:photos:total_views USER=mseppae 			# Returns an amount of views for photos uploaded by given user
-	rake photos:save_by_query KEY=tags VALUE=party-san	# Saves photos (metadata) matching the key => value query to a YAML file
-	rake photos:save_by_user USER=mseppae				# Saves all the photos (metadata) by given user
+	# Returns an amount of views for photos uploaded by given user
+	rake user:photos:total_views USER=mseppae
+	
+	# Saves photos (metadata) matching the key => value query to a YAML file
+	rake photos:save_by_query KEY=tags VALUE=party-san
+	
+	# Saves all the photos (metadata) by given user
+	rake photos:save_by_user USER=mseppae
 
 == Tests
 
