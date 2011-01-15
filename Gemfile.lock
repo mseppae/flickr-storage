@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    flickr-fu (0.1.4)
+      xml-magic
+    xml-magic (0.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  flickr-fu

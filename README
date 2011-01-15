@@ -1,0 +1,46 @@
+= flickr-storage
+
+NOTE: This project is just a sample code application.
+
+Playing around with flickr-fu ruby API for Flickr. Application stores photo metadata from
+flicker, it also has some simple statistics.
+
+== Getting started
+
+  Get flickr API key as detailed here:
+	http://www.flickr.com/services/api/misc.api_keys.html
+
+  Run "bundle install" to install flickr-fu
+
+  Update flickr.yml at config/
+  	key: "your key"
+  	secret: "your secret"
+  	token_cache: "token_cache.yml"
+
+== Usage
+
+Example:
+	rake user:photos:total_views USER=mseppae 			# Returns an amount of views for photos uploaded by given user
+	rake photos:save_by_query KEY=tags VALUE=party-san	# Saves photos (metadata) matching the key => value query to a YAML file
+	rake photos:save_by_user USER=mseppae				# Saves all the photos (metadata) by given user
+
+== Tests
+
+Run the test suite with: rspec spec/**/*_spec.rb -O spec/spec.ops
+
+== Class introductions
+
+# Querying flickr via flickr-fu API.
+	Flickr::Client
+
+# Temporary hash store for the query results.
+	Flickr::Store
+
+# Backend for permanent YAML storage (dumps all object data).
+	Flickr::Store::Backend::YAML
+
+# Simple statistics
+	Flickr::Statistics
+
+# Rake helper
+	Flickr::RakeHelper
